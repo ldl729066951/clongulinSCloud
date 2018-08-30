@@ -1,0 +1,33 @@
+logging: 
+  path: logs/
+  level: 
+    org: 
+      springframework: 
+        data: DEBUG
+
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n'
+---
+# Dev1 profile
+spring: 
+  profiles: dev1
+  application: 
+    name: springcloud2service
+  jpa: 
+    show-sql: true
+  datasource: 
+    jdbcUrl: jdbc:mysql://localhost:3306/d_auth?useUnicode=true&characterEncoding=utf8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+      
+server: 
+  port: 1111
+  
+eureka:
+  client:
+    service-url:
+      default-zone: http://locahost:8761/eureka/

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringCloud2Service
+Implementation-Version: 1.0
+Built-By: root
+Implementation-Vendor-Id: com.test
+Build-Jdk: 1.8.0_152
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/springcloud2study/springcloud2service
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,624 @@
+2018-08-21 17:25:31.142  INFO 14382 --- [restartedMain] c.t.s.ApplicationStarter                 : Starting ApplicationStarter on localhost.localdomain with PID 14382 (/root/workspace/springcloud2study/springcloud2service/target/classes started by root in /root/workspace/springcloud2study/springcloud2service)
+2018-08-21 17:25:31.149  INFO 14382 --- [restartedMain] c.t.s.ApplicationStarter                 : No active profile set, falling back to default profiles: default
+2018-08-21 17:25:31.256  INFO 14382 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@760006ea: startup date [Tue Aug 21 17:25:31 CST 2018]; root of context hierarchy
+2018-08-21 17:25:32.226 DEBUG 14382 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/workspace/springcloud2study/springcloud2service/target/classes/com/test/springcloud2service/repositories/AccountRepository.class]
+2018-08-21 17:25:32.271 DEBUG 14382 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Spring Data JPA - Registering repository: accountRepository - Interface: com.test.springcloud2service.repositories.AccountRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
+2018-08-21 17:25:32.938  INFO 14382 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a3f0add1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-21 17:25:33.785  INFO 14382 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-21 17:25:33.828  INFO 14382 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-21 17:25:33.829  INFO 14382 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-21 17:25:33.981  INFO 14382 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-08-21 17:25:34.118  INFO 14382 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-21 17:25:34.118  INFO 14382 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2862 ms
+2018-08-21 17:25:34.221  INFO 14382 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-21 17:25:34.227  INFO 14382 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-21 17:25:34.227  INFO 14382 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-21 17:25:34.228  INFO 14382 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-21 17:25:34.233  INFO 14382 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-21 17:25:34.234  INFO 14382 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to urls: [/*]
+2018-08-21 17:25:34.262  INFO 14382 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:Initializing filter
+2018-08-21 17:25:34.341 ERROR 14382 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - dataSource or dataSourceClassName or jdbcUrl is required.
+2018-08-21 17:25:34.345  WARN 14382 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authEntityManagerFactory' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Unsatisfied dependency expressed through method 'authEntityManagerFactory' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authDataSource' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+2018-08-21 17:25:34.349  INFO 14382 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-08-21 17:25:34.387  INFO 14382 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-21 17:25:34.405 ERROR 14382 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authEntityManagerFactory' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Unsatisfied dependency expressed through method 'authEntityManagerFactory' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authDataSource' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:732) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:474) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at com.test.springcloud2service.ApplicationStarter.main(ApplicationStarter.java:29) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authDataSource' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 37 common frames omitted
+Caused by: java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+	at com.zaxxer.hikari.HikariConfig.validate(HikariConfig.java:1063) ~[HikariCP-2.7.9.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:77) ~[HikariCP-2.7.9.jar:na]
+	at com.test.springcloud2service.configurations.AuthDSConfiguration.dataSource(AuthDSConfiguration.java:49) ~[classes/:na]
+	at com.test.springcloud2service.configurations.AuthDSConfiguration$$EnhancerBySpringCGLIB$$da07a16.CGLIB$dataSource$0(<generated>) ~[classes/:na]
+	at com.test.springcloud2service.configurations.AuthDSConfiguration$$EnhancerBySpringCGLIB$$da07a16$$FastClassBySpringCGLIB$$942d9a09.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at com.test.springcloud2service.configurations.AuthDSConfiguration$$EnhancerBySpringCGLIB$$da07a16.dataSource(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 38 common frames omitted
+
+2018-08-21 17:27:19.973  INFO 14412 --- [restartedMain] c.t.s.ApplicationStarter                 : Starting ApplicationStarter on localhost.localdomain with PID 14412 (/root/workspace/springcloud2study/springcloud2service/target/classes started by root in /root/workspace/springcloud2study/springcloud2service)
+2018-08-21 17:27:19.978  INFO 14412 --- [restartedMain] c.t.s.ApplicationStarter                 : The following profiles are active: dev
+2018-08-21 17:27:20.096  INFO 14412 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e42301a: startup date [Tue Aug 21 17:27:20 CST 2018]; root of context hierarchy
+2018-08-21 17:27:21.083 DEBUG 14412 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/workspace/springcloud2study/springcloud2service/target/classes/com/test/springcloud2service/repositories/AccountRepository.class]
+2018-08-21 17:27:21.133 DEBUG 14412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Spring Data JPA - Registering repository: accountRepository - Interface: com.test.springcloud2service.repositories.AccountRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
+2018-08-21 17:27:22.031  INFO 14412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ad7dda4b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-21 17:27:22.860  INFO 14412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-21 17:27:22.905  INFO 14412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-21 17:27:22.906  INFO 14412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-21 17:27:23.037  INFO 14412 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-08-21 17:27:23.150  INFO 14412 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-21 17:27:23.151  INFO 14412 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3055 ms
+2018-08-21 17:27:23.238  INFO 14412 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-21 17:27:23.243  INFO 14412 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-21 17:27:23.244  INFO 14412 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-21 17:27:23.244  INFO 14412 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-21 17:27:23.244  INFO 14412 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-21 17:27:23.244  INFO 14412 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to urls: [/*]
+2018-08-21 17:27:23.271  INFO 14412 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:Initializing filter
+2018-08-21 17:27:23.351 ERROR 14412 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - dataSource or dataSourceClassName or jdbcUrl is required.
+2018-08-21 17:27:23.353  WARN 14412 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authEntityManagerFactory' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Unsatisfied dependency expressed through method 'authEntityManagerFactory' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authDataSource' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+2018-08-21 17:27:23.357  INFO 14412 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-08-21 17:27:23.406  INFO 14412 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-21 17:27:23.418 ERROR 14412 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authEntityManagerFactory' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Unsatisfied dependency expressed through method 'authEntityManagerFactory' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authDataSource' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:732) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:474) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at com.test.springcloud2service.ApplicationStarter.main(ApplicationStarter.java:29) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authDataSource' defined in class path resource [com/test/springcloud2service/configurations/AuthDSConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 37 common frames omitted
+Caused by: java.lang.IllegalArgumentException: dataSource or dataSourceClassName or jdbcUrl is required.
+	at com.zaxxer.hikari.HikariConfig.validate(HikariConfig.java:1063) ~[HikariCP-2.7.9.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:77) ~[HikariCP-2.7.9.jar:na]
+	at com.test.springcloud2service.configurations.AuthDSConfiguration.dataSource(AuthDSConfiguration.java:49) ~[classes/:na]
+	at com.test.springcloud2service.configurations.AuthDSConfiguration$$EnhancerBySpringCGLIB$$172da690.CGLIB$dataSource$0(<generated>) ~[classes/:na]
+	at com.test.springcloud2service.configurations.AuthDSConfiguration$$EnhancerBySpringCGLIB$$172da690$$FastClassBySpringCGLIB$$97c7e43d.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at com.test.springcloud2service.configurations.AuthDSConfiguration$$EnhancerBySpringCGLIB$$172da690.dataSource(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 38 common frames omitted
+
+2018-08-21 17:27:45.486  INFO 14443 --- [restartedMain] c.t.s.ApplicationStarter                 : Starting ApplicationStarter on localhost.localdomain with PID 14443 (/root/workspace/springcloud2study/springcloud2service/target/classes started by root in /root/workspace/springcloud2study/springcloud2service)
+2018-08-21 17:27:45.487  INFO 14443 --- [restartedMain] c.t.s.ApplicationStarter                 : The following profiles are active: dev1
+2018-08-21 17:27:45.591  INFO 14443 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2872d430: startup date [Tue Aug 21 17:27:45 CST 2018]; root of context hierarchy
+2018-08-21 17:27:46.555 DEBUG 14443 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/workspace/springcloud2study/springcloud2service/target/classes/com/test/springcloud2service/repositories/AccountRepository.class]
+2018-08-21 17:27:46.605 DEBUG 14443 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Spring Data JPA - Registering repository: accountRepository - Interface: com.test.springcloud2service.repositories.AccountRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
+2018-08-21 17:27:47.444  INFO 14443 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e36d4621] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-21 17:27:48.288  INFO 14443 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1111 (http)
+2018-08-21 17:27:48.336  INFO 14443 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-21 17:27:48.336  INFO 14443 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-21 17:27:48.493  INFO 14443 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-08-21 17:27:48.593  INFO 14443 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-21 17:27:48.593  INFO 14443 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3002 ms
+2018-08-21 17:27:48.692  INFO 14443 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-21 17:27:48.697  INFO 14443 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-21 17:27:48.698  INFO 14443 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-21 17:27:48.698  INFO 14443 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-21 17:27:48.698  INFO 14443 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-21 17:27:48.698  INFO 14443 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to urls: [/*]
+2018-08-21 17:27:48.720  INFO 14443 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:Initializing filter
+2018-08-21 17:27:48.808  INFO 14443 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-08-21 17:27:49.100  INFO 14443 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-08-21 17:27:49.200  INFO 14443 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:27:49.651  INFO 14443 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:27:49.676  INFO 14443 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:27:49.677  INFO 14443 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:27:50.158 DEBUG 14443 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method findByIdAndDeleteAtIsNull
+2018-08-21 17:27:50.163 DEBUG 14443 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query Account.findByIdAndDeleteAtIsNull
+2018-08-21 17:27:50.168 DEBUG 14443 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query Account.findByIdAndDeleteAtIsNull
+2018-08-21 17:27:50.232 DEBUG 14443 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method findByPhoneAndDeleteAtIsNull
+2018-08-21 17:27:50.233 DEBUG 14443 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query Account.findByPhoneAndDeleteAtIsNull
+2018-08-21 17:27:50.233 DEBUG 14443 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query Account.findByPhoneAndDeleteAtIsNull
+2018-08-21 17:27:50.235 DEBUG 14443 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method findByPhoneAndPasswd
+2018-08-21 17:27:50.235 DEBUG 14443 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query Account.findByPhoneAndPasswd
+2018-08-21 17:27:50.236 DEBUG 14443 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query Account.findByPhoneAndPasswd
+2018-08-21 17:27:50.245 DEBUG 14443 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method findByIdIn
+2018-08-21 17:27:50.486 DEBUG 14443 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method login
+2018-08-21 17:27:50.669  INFO 14443 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-21 17:27:50.986  INFO 14443 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2872d430: startup date [Tue Aug 21 17:27:45 CST 2018]; root of context hierarchy
+2018-08-21 17:27:51.053  WARN 14443 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-21 17:27:51.103  INFO 14443 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/account/getAccount],methods=[GET]}" onto public com.test.springcloud2service.entities.Account com.test.springcloud2service.controllers.AccountController.getAccount(java.lang.Long)
+2018-08-21 17:27:51.110  INFO 14443 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-21 17:27:51.111  INFO 14443 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-21 17:27:51.166  INFO 14443 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-21 17:27:51.166  INFO 14443 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-21 17:27:51.522  INFO 14443 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-21 17:27:51.570  INFO 14443 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-21 17:27:51.572  INFO 14443 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'authDSConfiguration' has been autodetected for JMX exposure
+2018-08-21 17:27:51.572  INFO 14443 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'authDataSource' has been autodetected for JMX exposure
+2018-08-21 17:27:51.579  INFO 14443 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'authDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=authDataSource,type=HikariDataSource]
+2018-08-21 17:27:51.584  INFO 14443 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'authDSConfiguration': registering with JMX server as MBean [com.test.springcloud2service.configurations:name=authDSConfiguration,type=AuthDSConfiguration]
+2018-08-21 17:27:51.627  INFO 14443 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1111 (http) with context path ''
+2018-08-21 17:27:51.634  INFO 14443 --- [restartedMain] c.t.s.ApplicationStarter                 : Started ApplicationStarter in 7.059 seconds (JVM running for 7.781)
+2018-08-21 17:28:10.892  INFO 14443 --- [http-nio-1111-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-21 17:28:10.893  INFO 14443 --- [http-nio-1111-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-21 17:28:10.915  INFO 14443 --- [http-nio-1111-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-08-21 17:28:10.927  INFO 14443 --- [http-nio-1111-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:doFilter()
+2018-08-21 17:28:11.212  INFO 14443 --- [http-nio-1111-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:doFilter()
+2018-08-21 17:28:23.547  INFO 14443 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2872d430: startup date [Tue Aug 21 17:27:45 CST 2018]; root of context hierarchy
+2018-08-21 17:28:23.556  INFO 14443 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-21 17:28:23.556  INFO 14443 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-21 17:28:23.559  INFO 14443 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:28:23.562  INFO 14443 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-08-21 17:28:23.581  INFO 14443 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-08-21 17:37:02.186  INFO 14658 --- [restartedMain] c.t.s.ApplicationStarter                 : The following profiles are active: dev1
+2018-08-21 17:37:02.227  INFO 14658 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3de9ba52: startup date [Tue Aug 21 17:37:02 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@443e10c5
+2018-08-21 17:37:03.108 DEBUG 14658 --- [restartedMain] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/workspace/springcloud2study/springcloud2service/target/classes/com/test/springcloud2service/repositories/AccountRepository.class]
+2018-08-21 17:37:03.179 DEBUG 14658 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Spring Data JPA - Registering repository: accountRepository - Interface: com.test.springcloud2service.repositories.AccountRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
+2018-08-21 17:37:04.031  INFO 14658 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a76c1f56-02a4-3cd3-81b6-c9aead8827c3
+2018-08-21 17:37:04.075  INFO 14658 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-08-21 17:37:04.233  INFO 14658 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$58d6190e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-21 17:37:04.277  INFO 14658 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$74f01c0b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-21 17:37:05.359  INFO 14658 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1111 (http)
+2018-08-21 17:37:05.409  INFO 14658 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-21 17:37:05.410  INFO 14658 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-21 17:37:05.422  INFO 14658 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-08-21 17:37:05.589  INFO 14658 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-21 17:37:05.591  INFO 14658 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3363 ms
+2018-08-21 17:37:05.709  INFO 14658 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-21 17:37:05.713  INFO 14658 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-21 17:37:05.714  INFO 14658 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-21 17:37:05.715  INFO 14658 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-21 17:37:05.716  INFO 14658 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-21 17:37:05.719  INFO 14658 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to urls: [/*]
+2018-08-21 17:37:05.749  INFO 14658 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:Initializing filter
+2018-08-21 17:37:05.869  INFO 14658 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-08-21 17:37:06.158  INFO 14658 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-08-21 17:37:06.211  INFO 14658 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:37:06.770  INFO 14658 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:37:06.793  INFO 14658 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:37:06.794  INFO 14658 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'auth'
+2018-08-21 17:37:07.278 DEBUG 14658 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method findByIdAndDeleteAtIsNull
+2018-08-21 17:37:07.291 DEBUG 14658 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query Account.findByIdAndDeleteAtIsNull
+2018-08-21 17:37:07.297 DEBUG 14658 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query Account.findByIdAndDeleteAtIsNull
+2018-08-21 17:37:07.384 DEBUG 14658 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method findByPhoneAndDeleteAtIsNull
+2018-08-21 17:37:07.387 DEBUG 14658 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query Account.findByPhoneAndDeleteAtIsNull
+2018-08-21 17:37:07.388 DEBUG 14658 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query Account.findByPhoneAndDeleteAtIsNull
+2018-08-21 17:37:07.393 DEBUG 14658 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method findByPhoneAndPasswd
+2018-08-21 17:37:07.394 DEBUG 14658 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query Account.findByPhoneAndPasswd
+2018-08-21 17:37:07.395 DEBUG 14658 --- [restartedMain] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query Account.findByPhoneAndPasswd
+2018-08-21 17:37:07.408 DEBUG 14658 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method findByIdIn
+2018-08-21 17:37:07.626 DEBUG 14658 --- [restartedMain] o.s.d.j.r.query.JpaQueryFactory          : Looking up query for method login
+2018-08-21 17:37:07.707  WARN 14658 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-08-21 17:37:07.707  INFO 14658 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-21 17:37:07.714  WARN 14658 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-08-21 17:37:07.714  INFO 14658 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-08-21 17:37:07.845  INFO 14658 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-21 17:37:08.191  INFO 14658 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3de9ba52: startup date [Tue Aug 21 17:37:02 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@443e10c5
+2018-08-21 17:37:08.263  WARN 14658 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-21 17:37:08.321  INFO 14658 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/account/getAccount],methods=[GET]}" onto public com.test.springcloud2service.entities.Account com.test.springcloud2service.controllers.AccountController.getAccount(java.lang.Long)
+2018-08-21 17:37:08.328  INFO 14658 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-21 17:37:08.329  INFO 14658 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-21 17:37:08.379  INFO 14658 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-21 17:37:08.379  INFO 14658 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-21 17:37:08.880  WARN 14658 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2018-08-21 17:37:09.420  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-21 17:37:09.421  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'authDSConfiguration' has been autodetected for JMX exposure
+2018-08-21 17:37:09.422  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'authDataSource' has been autodetected for JMX exposure
+2018-08-21 17:37:09.433  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-08-21 17:37:09.434  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-08-21 17:37:09.436  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-08-21 17:37:09.439  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'authDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=authDataSource,type=HikariDataSource]
+2018-08-21 17:37:09.443  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-08-21 17:37:09.465  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'authDSConfiguration': registering with JMX server as MBean [com.test.springcloud2service.configurations:name=authDSConfiguration,type=AuthDSConfiguration]
+2018-08-21 17:37:09.469  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-08-21 17:37:09.484  INFO 14658 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=3de9ba52,type=ConfigurationPropertiesRebinder]
+2018-08-21 17:37:09.501  INFO 14658 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-08-21 17:37:09.511  INFO 14658 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-08-21 17:37:09.809  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2018-08-21 17:37:10.110  INFO 14658 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-08-21 17:37:10.111  INFO 14658 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-08-21 17:37:10.302  INFO 14658 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-08-21 17:37:10.303  INFO 14658 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-08-21 17:37:10.558  INFO 14658 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 17:37:10.583  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-08-21 17:37:10.584  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-08-21 17:37:10.584  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-08-21 17:37:10.584  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-08-21 17:37:10.584  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-08-21 17:37:10.585  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-08-21 17:37:10.586  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-08-21 17:37:10.775  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-08-21 17:37:10.777  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-08-21 17:37:10.783  INFO 14658 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-08-21 17:37:10.791  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1534844230789 with initial instances count: 0
+2018-08-21 17:37:10.801  INFO 14658 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application springcloud2service with eureka with status UP
+2018-08-21 17:37:10.802  INFO 14658 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1534844230802, current=UP, previous=STARTING]
+2018-08-21 17:37:10.810  INFO 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SPRINGCLOUD2SERVICE/192.168.2.171:springcloud2service:1111: registering service...
+2018-08-21 17:37:10.919  INFO 14658 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1111 (http) with context path ''
+2018-08-21 17:37:10.938  INFO 14658 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 1111
+2018-08-21 17:37:10.948  INFO 14658 --- [restartedMain] c.t.s.ApplicationStarter                 : Started ApplicationStarter in 10.641 seconds (JVM running for 11.342)
+2018-08-21 17:37:11.164  INFO 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SPRINGCLOUD2SERVICE/192.168.2.171:springcloud2service:1111 - registration status: 204
+2018-08-21 17:37:40.780  INFO 14658 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-08-21 17:37:40.783  INFO 14658 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-08-21 17:37:40.789  INFO 14658 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-08-21 17:37:40.797  INFO 14658 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-08-21 17:37:40.798  INFO 14658 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-08-21 17:37:40.798  INFO 14658 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2018-08-21 17:37:40.799  INFO 14658 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-08-21 17:37:40.951  INFO 14658 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-08-21 17:42:10.590  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 17:47:10.593  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 17:52:10.595  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 17:57:10.597  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 17:59:31.419  INFO 14658 --- [http-nio-1111-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-21 17:59:31.419  INFO 14658 --- [http-nio-1111-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-21 17:59:31.446  INFO 14658 --- [http-nio-1111-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-08-21 17:59:31.459  INFO 14658 --- [http-nio-1111-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:doFilter()
+2018-08-21 17:59:31.630  INFO 14658 --- [http-nio-1111-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:doFilter()
+2018-08-21 17:59:50.751  INFO 14658 --- [http-nio-1111-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:doFilter()
+2018-08-21 17:59:53.828  INFO 14658 --- [http-nio-1111-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:doFilter()
+2018-08-21 17:59:56.649  INFO 14658 --- [http-nio-1111-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:doFilter()
+2018-08-21 18:00:00.336  INFO 14658 --- [http-nio-1111-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : CrossFilter:doFilter()
+2018-08-21 18:02:10.600  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:07:10.602  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:12:10.603  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:17:10.606  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:22:10.608  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:27:10.610  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:32:10.612  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:37:10.616  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:42:10.618  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:47:10.620  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:52:10.622  INFO 14658 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-08-21 18:53:27.427  INFO 14658 --- [Thread-10] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3de9ba52: startup date [Tue Aug 21 17:37:02 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@443e10c5
+2018-08-21 18:53:27.434  INFO 14658 --- [Thread-10] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application springcloud2service with eureka with status DOWN
+2018-08-21 18:53:27.434  WARN 14658 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1534848807434, current=DOWN, previous=UP]
+2018-08-21 18:53:27.437  INFO 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SPRINGCLOUD2SERVICE/192.168.2.171:springcloud2service:1111: registering service...
+2018-08-21 18:53:27.446  INFO 14658 --- [Thread-10] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-08-21 18:53:27.448  INFO 14658 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-08-21 18:53:27.449 ERROR 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.8.7.jar:1.8.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_152]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_152]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_152]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_152]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.6.jar:4.5.6]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 29 common frames omitted
+
+2018-08-21 18:53:27.450  WARN 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+2018-08-21 18:53:27.451 ERROR 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.8.7.jar:1.8.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_152]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_152]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_152]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_152]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.6.jar:4.5.6]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+2018-08-21 18:53:27.452  WARN 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+2018-08-21 18:53:27.460  WARN 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SPRINGCLOUD2SERVICE/192.168.2.171:springcloud2service:1111 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.8.7.jar:1.8.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_152]
+
+2018-08-21 18:53:27.461  WARN 14658 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.8.7.jar:1.8.7]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_152]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_152]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_152]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_152]
+
+2018-08-21 18:53:27.462  INFO 14658 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2018-08-21 18:53:27.469 ERROR 14658 --- [Thread-10] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:76) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:923) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:901) [eureka-client-1.8.7.jar:1.8.7]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:223) [spring-core-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482) [spring-cloud-context-2.0.0.M9.jar:2.0.0.M9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) [spring-aop-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) [spring-aop-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at com.sun.proxy.$Proxy113.shutdown(Unknown Source) [na:na]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.close(EurekaRegistration.java:207) [spring-cloud-netflix-eureka-client-2.0.0.M8.jar:2.0.0.M8]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937) [spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_152]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_152]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_152]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.6.jar:4.5.6]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 46 common frames omitted
+
+2018-08-21 18:53:27.470  WARN 14658 --- [Thread-10] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+2018-08-21 18:53:27.471 ERROR 14658 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SPRINGCLOUD2SERVICE/192.168.2.171:springcloud2service:1111 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:923) [eureka-client-1.8.7.jar:1.8.7]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:901) [eureka-client-1.8.7.jar:1.8.7]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:223) [spring-core-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482) [spring-cloud-context-2.0.0.M9.jar:2.0.0.M9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) [spring-aop-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) [spring-aop-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at com.sun.proxy.$Proxy113.shutdown(Unknown Source) [na:na]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.close(EurekaRegistration.java:207) [spring-cloud-netflix-eureka-client-2.0.0.M8.jar:2.0.0.M8]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961) [spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937) [spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+
+2018-08-21 18:53:27.493  INFO 14658 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2018-08-21 18:53:27.499  INFO 14658 --- [Thread-10] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-21 18:53:27.500  INFO 14658 --- [Thread-10] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-21 18:53:27.504  INFO 14658 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'auth'
+2018-08-21 18:53:27.512  INFO 14658 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-08-21 18:53:27.516  INFO 14658 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
